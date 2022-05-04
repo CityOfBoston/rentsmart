@@ -1,0 +1,181 @@
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>RentSmart | City of Boston</title>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400italic|Montserrat:700' rel='stylesheet' type='text/css' />
+    <link href='css/main_rs.css' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="images/font-awesome-4.7.0/css/font-awesome.min.css"><!--For certain icons-->
+    <link href='css/rentsmart.css' rel='stylesheet' type='text/css' /><!--Custom styling for the RentSmart page-->
+  </head>
+  <body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63687446-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <script src="js/CoB_header.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl-4iBRQv00OaIy7CncOMRizmkGfcaoHw&libraries=visualization,geometry" async defer></script>
+    <script src="js/details_rs.js"></script>
+   
+  <div class="page" id="page"><div class="main"><div class="container"><section class="main-content" id="content" role="main">
+    <article id="node-&gt; &lt;div class=">
+
+      <div class="department-info-wrapper desktop-100">
+          <h1 class="title">RENTSMART BOSTON</h1>
+          <hr style="height:10px;border:none;color:#333;background-color:#333;" />
+          <!-- LEFT DIV -->
+        <div class="column mobile-100 desktop-100-left new-search-link"> 
+          <a href="index.html">NEW SEARCH</a>
+        </div>
+        <div class="column mobile-100 desktop-40-left"> 
+          <div class="intro-text supporting-text search-result-title" id="main_address"></div>
+          <div id="propSubCaveat"></div>
+          <div id="map-canvas-map">
+            <!-- <img src="http://placehold.it/400x200"><Map Canvas goes here -->
+          </div>
+          <div id="propertyTypeCaveat"></div>
+          <div class="property-attribute-listing"><!--Make sure to remove the default values before going live/during testing.-->
+            
+            <h5 class="property-attribute-header">Owner <span class="helpButtons" id="propertyOwnerHelp">(?)</span></h5>
+            <p class="property-attribute-value" id="propertyOwner"></p>
+
+            <h5 class="property-attribute-header">Property Type</h5>
+            <p class="property-attribute-value" id="propertyType"></p>
+            
+            <h5 class="property-attribute-header">Built <span class="helpButtons" id="propertyBuiltHelp">(?)</span></h5>
+            <p class="property-attribute-value" id="buildYear"></p>
+
+            <h5 class="property-attribute-header">Remodeled <span class="helpButtons" id="propertyRemodHelp">(?)</span></h5>
+            <p class="property-attribute-value" id="remodelYear"></p>
+
+            <h5 class="property-attribute-header">Number of Bedrooms <span class="helpButtons" id="propertyBedHelp">(?)</span></h5>
+            <p class="property-attribute-value" id="bedNumber"></p>
+
+            <h5 class="property-attribute-header">Number of Bathrooms <span class="helpButtons" id="propertyBathHelp">(?)</span></h5>
+            <p class="property-attribute-value" id="bathNumber"></p>
+
+            <h5 class="property-attribute-header">Living Area Sq. Ft. <span class="helpButtons" id="propertyLivingHelp">(?)</span></h5>
+            <p class="property-attribute-value" id="livingArea"></p>
+
+          </div>
+          <div>
+            <div class="input_container" id="pickRelatedProperty">
+              <h5 class="property-attribute-header">OTHER PROPERTIES BY THIS LANDLORD:</h5>   
+              <span id="userInput" style="display:none">Please input a valid address within the City of Boston</span>         
+              <select class="related-property-list" id="relatedProperty" style="width:100%" label = "relatedPropertyinput" aria-describedby="userInput" aria-labelledby="userInput">
+                <!-- <option>None Selected</option> -->
+
+              </select>
+              <button type="button" id="goToRelatedProperty" class="btn btn-default" style="width:50%">DISPLAY RESULTS</button>
+            </div>
+          </div>
+        </div>
+          <!-- RIGHT DIV -->
+        <div class="column mobile-100 desktop-60-right">
+          <div class="intro-text supporting-text search-result-title">Property Events:</div>
+          <div class="time-buttons-section"><!--Add JS click events to manipulate data with buttons-->
+            <button type="button" id="1YrTimeBtn" class="btn btn-default time-button-active" style="width:30%">PAST YEAR</button>
+            <button type="button" id="3YrTimeBtn" class="btn btn-default time-button-inactive" style="width:30%">PAST 3 YEARS</button>
+            <button type="button" id="5YrTimeBtn" class="btn btn-default time-button-inactive" style="width:30%">PAST 5 YEARS</button>
+          </div>
+
+          <div class="violations-header-inactive" id="housingViolationHeader">
+            
+            <span class="violations-header-inactive-text" id="housingViolationHeaderText">HOUSING VIOLATIONS</span>
+            <span id="housingViolationFa" class="mobileLineBreak"><i class="fa fa-angle-right fa-lg"></i></span>
+            <br class="mobileLineBreak">
+            <span class="violations-number-text" id="housingViolationTotalNum"><span id="housingViolationCount">0</span> Violation(s) &nbsp;<i class="fa fa-angle-right fa-lg fa-fs"></i></span>
+
+          </div>
+
+          <div class="violations-content violations-content-inactive" id="housingViolationContentDiv">
+            <p class="contentList" id="housingViolationContent">N/A</p>
+          </div>
+
+          <div class="violations-header-inactive" id="buildingViolationHeader">
+            <span class="violations-header-inactive-text" id="buildingViolationHeaderText">BUILDING VIOLATIONS</span>
+            <span id="buildingViolationFa" class="mobileLineBreak"><i class="fa fa-angle-right fa-lg"></i></span>
+            <br class="mobileLineBreak">
+            <span class="violations-number-text" id="buildingViolationTotalNum"><span id="buildingViolationCount">0</span> Violation(s) &nbsp; <i class="fa fa-angle-right fa-lg fa-fs"></i></span>
+          </div>
+
+          <div class="violations-content violations-content-inactive" id="buildingViolationContentDiv">
+            <p class="contentList" id="buildingViolationContent">N/A</p>
+          </div>
+
+          <div class="violations-header-inactive" id="enforcementViolationHeader">
+            <span class="violations-header-inactive-text" id="enforcementViolationHeaderText">ENFORCEMENT VIOLATIONS</span>
+            <span id="enforcementViolationFa" class="mobileLineBreak"><i class="fa fa-angle-right fa-lg"></i></span>
+            <br class="mobileLineBreak">
+            <span class="violations-number-text" id="enforcementViolationTotalNum"><span id="enforcementViolationCount">0</span> Violation(s) &nbsp; <i class="fa fa-angle-right fa-lg fa-fs"></i></span>
+          </div>
+          <div class="violations-content violations-content-inactive" id="enforcementViolationContentDiv">
+            <p class="contentList" id="enforcementViolationContent">N/A</p>
+          </div>
+
+          <div class="violations-header-inactive" id="housingComplaintHeader">
+            <span class="violations-header-inactive-text" id="housingComplaintHeaderText">HOUSING COMPLAINTS</span>
+            <span id="housingComplaintFa" class="mobileLineBreak"><i class="fa fa-angle-right fa-lg"></i></span>
+            <br class="mobileLineBreak">
+            <span class="violations-number-text" id="housingComplaintTotalNum"><span id="housingComplaintCount">0</span> Complaint(s) &nbsp; <i class="fa fa-angle-right fa-lg fa-fs"></i></span>
+          </div>
+          <div class="violations-content violations-content-inactive" id="housingComplaintContentDiv">
+            <p class="contentList" id="housingComplaintContent">N/A</p>
+          </div>
+
+          <div class="violations-header-inactive" id="sanitationRequestHeader">
+            <span class="violations-header-inactive-text" id="sanitationRequestHeaderText">SANITATION REQUESTS</span>
+            <span id="sanitationRequestFa" class="mobileLineBreak"><i class="fa fa-angle-right fa-lg"></i></span>
+            <br class="mobileLineBreak">
+            <span class="violations-number-text" id="sanitationRequestTotalNum"><span id="sanitationRequestCount">0</span> Request(s) &nbsp; <i class="fa fa-angle-right fa-lg fa-fs"></i></span>
+          </div>
+          <div class="violations-content violations-content-inactive" id="sanitationRequestContentDiv">
+            <p class="contentList" id="sanitationRequestContent">N/A</p>
+          </div>
+
+          <div class="violations-header-inactive" id="civicRequestHeader">
+            <span class="violations-header-inactive-text" id="civicRequestHeaderText">CIVIC MAINTENANCE REQUESTS</span>
+            <span id="civicRequestFa" class="mobileLineBreak"><i class="fa fa-angle-right fa-lg"></i></span>
+            <br class="mobileLineBreak">
+            <span class="violations-number-text" id="civicRequestTotalNum"><span id="civicRequestCount">0</span> Request(s) &nbsp; <i class="fa fa-angle-right fa-lg fa-fs"></i></span>
+          </div>
+          <div class="violations-content violations-content-inactive" id="civicRequestContentDiv">
+            <p class="contentList" id="civicRequestContent">N/A</p>
+          </div>
+
+
+        <div class="clearfix"></div>
+
+      </div>
+
+      <div class="department-components desktop-100"></div>
+
+    </article>
+  </section></div></div></div>
+    
+  </body>
+
+
+  <footer class="footer region region-footer">
+    <div class="container">
+      <div class="block block-menu-block first last odd">
+        <div class="menu-block-wrapper menu-block-2 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+          <div>
+              <p id="copyrightMessage">Powered by <a target="_blank" href="http://www.qlarion.com">Qlarion</a>.  &copy; 2017, Qlarion Inc.  All rights reserved.</p>
+              <p id="copyrightMessageMobile"><a target="_blank" href="http://www.qlarion.com">Qlarion</a>  &copy; 2017</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</html>
+
+

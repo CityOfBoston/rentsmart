@@ -1,0 +1,91 @@
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>RentSmart | City of Boston</title>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400italic|Montserrat:700' rel='stylesheet' type='text/css' />
+    <link href='css/main_rs.css' rel='stylesheet' type='text/css' />
+    <link href='css/rentsmart.css' rel='stylesheet' type='text/css' /><!--Custom styling for the RentSmart page-->
+  </head>
+  <body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63687446-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/CoB_header.js"></script>
+    <script src="js/main_rs.js"> </script>
+    <script type="text/javascript" src="autocomplete_max/js/script.js"></script>
+    
+  <div class="page" id="page"><div class="main"><div class="container"><section class="main-content" id="content" role="main">
+    <article id="node-&gt; &lt;div class=">
+
+      <div class="department-info-wrapper desktop-100">
+          <h1 class="title">RENTSMART BOSTON</h1>
+          <hr style="height:10px;border:none;color:#333;background-color:#333;" />
+          <!-- LEFT DIV -->
+        <div class="column mobile-100 desktop-40-left"> 
+       
+          <div class="intro-text supporting-text squiggle-border-bottom"> Enter an address below to search for information about a residential property in Boston </div>
+          <span id="userInput" style="display:none">Please input a valid address within the City of Boston</span>
+            <div class="input_container" id="inputForm" >
+                  <div class="input_labels">ADDRESS </div>
+                  <div>
+                    <input type="text" id="addressTxt" placeholder="Address" label = "Address" aria-describedby="userInput" aria-labelledby="userInput" onkeyup="autocomplet()" style="width:100%">
+                    <ul class = "secondary-list" id="country_list_id"></ul>
+                  </div>
+            </div>
+            <div class="input_container" id="inputForm">
+                  <div width="100%" class="input_labels"> <div style="width:45%; display:inline;">unit number</div> <div style="width:45%; display:inline; float:right">zip code</div></div>
+
+                    <input type="text" id="unitTxt" class="form-control" placeholder="Unit number" aria-describedby="userInput" aria-labelledby="userInput" style="width:45%; display:inline;">
+                    <input type="text" id="zipTxt" class="form-control-right" placeholder="Zipcode" aria-describedby="userInput" aria-labelledby="userInput" style="width:45%"></td>
+                  
+            </div>
+
+            <div class="input_container" id="inputForm" style="text-align:right">
+                  <button type="button" id="submitBtn" class="btn btn-default">SEARCH</button></td>   
+            </div>
+
+        </div>
+          <!-- RIGHT DIV -->
+        <div class="column mobile-100 desktop-40-right">
+          <img src="street-picture.svg" alt="">
+        </div>
+
+
+        <div class="clearfix"></div>
+
+      </div>
+
+      <div class="department-components desktop-100"></div>
+
+    </article>
+  </section></div></div></div>
+    
+  </body>
+
+
+  <footer class="footer region region-footer">
+    <div class="container">
+      <div class="block block-menu-block first last odd">
+        <div class="menu-block-wrapper menu-block-2 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+          <div>
+              
+              <p id="copyrightMessage">Powered by <a target="_blank" href="http://www.qlarion.com">Qlarion</a>.  &copy; 2017, Qlarion Inc.  All rights reserved.</p>
+              <p id="copyrightMessageMobile"><a target="_blank" href="http://www.qlarion.com">Qlarion</a>  &copy; 2017</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</html>
+
+
