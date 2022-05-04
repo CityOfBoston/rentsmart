@@ -1,0 +1,516 @@
+
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+/*html, body,*/ 
+#map-canvas {
+	/*height: 300px;*/
+	/* These properties keep the map height and width proportions even*/
+	position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+    background: transparent url(images/progress_bar.gif) no-repeat center center;
+
+}
+#map-canvas-map {
+	/*height: 300px;*/
+	/* These properties keep the map height and width proportions even*/
+	position: absolute;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-bottom: 0;
+    display:none;
+}
+#exitStreetView{
+	width: 30%;
+	text-align: center;
+	display: none;
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin: 3px;
+}
+#maintenanceImage{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+}
+#load-img {
+	position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+#logo {
+	height: 84px;
+	width: 80px
+}
+#zipmap {
+	height: 1016px;
+	width: 800px
+}
+body {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-image: url("images/BG_lighter.jpg");
+	background-size: 100%;
+	background-color: transparent;
+	font-family: 'Lato', sans-serif;
+}
+.bordered {
+	border: 10px solid #3e738f;
+	/*background:
+	radial-gradient(
+      #9bb1c7 7%,
+      #69699b 11%,
+      transparent 50%
+    );
+    border-width: 20px;*/
+}
+.vr-border {
+	border-right:1px solid #ffffff;
+    text-align: center;
+    color: #ffffff;
+}
+.all-border {
+	border-right:1px solid #94969e;
+	border-top:1px solid #94969e;
+    color: #ffffff;
+}
+.top-border{
+	border-top:1px solid #94969e;
+    color: #ffffff;
+}
+
+#welcomeMessage {
+	text-align: left;
+	margin-bottom: 0px;
+	color: #ffffff;
+	font-size: 54px;
+}
+#resultsMessage {
+	text-align: left;
+	margin-top: 5px;
+	color: #ffffff;
+	font-size: 20px;
+}
+#directionsMessage {
+	text-align: left;
+	margin-top: 5px;
+	color: #ffffff;
+	font-size: 20px;
+}
+#aboutThisPropertyTitle {
+	text-align: left;
+	color: #ffffff;
+	font-size: 18px;
+}
+.aboutThisPropertyLabel {
+	color: #ffffff;
+	font-size: 12px;
+}
+#propertyBuiltDate {
+	color: #ffffff;
+	font-size: 12px;
+}
+#propertyRemodDate {
+	color: #ffffff;
+	font-size: 12px;
+}
+#propertyRemodDateBox{
+	display: none;
+}
+#propertyOwner {
+	color: #ffffff;
+	font-size: 12px;
+}
+
+/* Styling for the input form elements */
+td .search-form {
+	padding: 3px;
+}
+#submitBtn {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin: 3px;
+}
+#closeHelpBtn0 {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin: 3px;
+}
+#closeHelpBtn1 {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin: 3px;
+}
+#closeHelpBtn2 {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin: 3px;
+}
+#closeHelpBtn3 {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin: 3px;
+}
+.btn-default {
+	background: none;
+	background-color: #93baca;	
+}
+.btn-default:hover {
+	background: none;
+	background-color: #3e738f;
+}
+.time-button-active {
+	background: none;
+	background-color: #3e738f;
+}
+#three-mth-Btn {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	width: 100%;
+	padding-left: 6px;
+	text-align: center;
+}
+#six-mth-Btn {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	width: 100%;
+	padding-left: 6px;
+	text-align: center;
+	display: none;
+}
+#six_mth_Btn_load{
+	font-size: 12px;
+	height: 20px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	width: 100%;
+	padding-left: 6px;
+	text-align: center;
+	opacity: .5;
+}
+#twelve_mth_Btn_load{
+	font-size: 12px;
+	height: 20px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	width: 100%;
+	padding-left: 6px;
+	text-align: center;
+	opacity: .5;
+}
+#twelve-mth-Btn {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	width: 100%;
+	padding-left: 6px;
+	text-align: center;
+	display: none;
+}
+#tourLink {
+	/*color: #9bb1c7;*/
+	color: #3e738f;
+	font-size: 14px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+}
+#addressTxt {
+    height: 40px;
+    text-indent: 5px;
+    font-weight: 10;
+    border-radius: 4px;
+    margin: 3px;
+}
+#unitTxt {
+    height: 40px;
+    text-indent: 5px;
+    font-weight: 10;
+    border-radius: 4px;
+    margin: 3px;
+    margin-right: 3px;
+}
+#zipTxt {
+    height: 40px;
+    text-indent: 5px;
+    font-weight: 10;
+    border-radius: 4px;
+    margin: 3px;
+    margin-left: 3px;
+}
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+#inputForm {
+	padding-left: 12px;
+}
+
+.input_container {
+	height: 30px;
+	float: left;
+	width: 100%;
+}
+.input_container input {
+	height: 20px;
+	width: 100%;
+	padding: 3px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+}
+.input_container ul {
+	width: 100%;
+	height: 200px;
+	overflow: scroll;
+	border: 1px solid #eaeaea;
+	position: relative;
+	z-index: 9;
+	background: #ffffff;
+	list-style: none;
+	border-radius: 4px;
+	
+}
+.input_container ul li {
+	padding: 5px;
+	width: 100%;
+	
+}
+.input_container ul li:hover {
+	background: #3e738f;
+	cursor: pointer; 
+	cursor: hand;
+	border-radius: 4px;
+}
+#country_list_id {
+	display: none;
+	text-align: left;
+	padding-left: 4px
+}
+
+hr { 
+	width:100%; 
+	height:1px; 
+	border-color: #ffffff;
+	padding-bottom: -30px;
+}
+
+footer {
+	text-align: center;
+	background: rgba(0, 0, 0, .45);
+	overflow: hidden;
+	/*height: 100px;*/
+	/*position: fixed;*/
+	bottom: 0px;
+	/*width: 100%;*/
+}
+#poweredByMessage{
+	font-size: 35px;
+	color: #ffffff;
+}
+#copyrightMessage {
+	font-size:12px;
+	color: #ffffff;
+}
+#returnToBoston {
+	font-size:18px;
+	color: #ffffff;
+}
+#referenceButtonClose {
+	height: 40px;
+	text-shadow: none;
+	color: white;
+	border-color: #3e738f;
+	border-radius: 4px;
+	margin: 3px;
+}
+.footer-stats {
+	margin-bottom: 0px;
+	font-size: 35px;
+}
+/* Styling for the panel boxes in the cotrol panel for the map*/
+.panel {
+	margin-bottom: 5px;
+	border-radius: 0px;
+	/*background: rgba(255, 255, 255, .2);*/
+    color: #ffffff;
+}
+.panel-default {
+	border-width: 0px;
+}
+.map-toggle-inactive {
+	color: #ffffff;
+}
+.map-toggle-active {
+	color: #6B9EB6;
+}
+.box-toggle-inactive {
+	background: rgba(255, 255, 255, .2);
+    color: #ffffff;
+}
+.box-toggle-active {
+	background: rgba(0, 0, 0, .45);
+    color: #ffffff;
+}
+.box-toggle-text-inactive {
+	color: #ffffff;
+}
+.box-toggle-text-active {
+	color: #6B9EB6;
+}
+.code-enforcement-box {
+	background: rgba(255, 255, 255, .2);
+}
+#codeEnforcementViolationsTitle {
+	font-size: 18px;
+	margin-bottom: 0px;
+}
+.codeEnforcementViolationsItem {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+#nonViolentCrimeText {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#nonViolentCrimeNumber {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#violentCrimeText {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#violentCrimeNumber {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#noiseViolationText {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#noiseViolationNumber {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#SanitationText {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#SanitationNumber {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#HousingText {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#HousingNumber {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#CivicText {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#CivicNumber {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+#within14mile {
+	font-size: 12px;
+	margin-bottom: 0px;
+	text-align: center;
+	opacity: .5;
+}
+#codeViolations {
+	font-size: 12px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	text-align: left;
+	opacity: .5;
+}
+#propertyStats {
+	display: none;
+}
+.nav-violation-list {
+	max-height: 100px;
+    overflow-y:auto;
+}
+.list-expander {
+	background: none;
+	color: #93baca;	
+}
+.list-expander:hover {
+	background: none;
+	color: #3e738f;	
+}
+.fa-chevron-circle-down {
+	background: none;
+	color: #ffffff;	
+}
+#codeEnforcementListItems{
+	background: none;
+}
+#housingEnforcementListItems{
+	background: none;
+}
+#buildingEnforcementListItems{
+	background: none;
+}
+#country_list_id{
+	z-index: 1000;
+}
