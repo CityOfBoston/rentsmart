@@ -1,0 +1,15 @@
+Source Project  |  Link to License | License Type
+
+https://github.com/jawj/OverlappingMarkerSpiderfier | https://github.com/jawj/OverlappingMarkerSpiderfier#licence | http://opensource.org/licenses/mit-license.php
+
+http://getbootstrap.com/ | https://github.com/twbs/bootstrap/blob/master/LICENSE | http://opensource.org/licenses/mit-license.php
+
+http://startbootstrap.com/template-overviews/agency/ | https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE | http://www.apache.org/licenses/
+
+https://jquery.com/ | https://jquery.org/license/ | http://opensource.org/licenses/mit-license.php
+
+https://developers.google.com/maps/ | https://developers.google.com/site-policies | http://www.apache.org/licenses/
+
+http://fortawesome.github.io/Font-Awesome/ | http://fortawesome.github.io/Font-Awesome/license/ | http://opensource.org/licenses/mit-license.php
+
+https://mapicons.mapsmarker.com/ | https://mapicons.mapsmarker.com/about/license/ | http://creativecommons.org/licenses/by-sa/3.0/

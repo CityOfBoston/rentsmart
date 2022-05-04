@@ -1,0 +1,13 @@
+\COPY (select * from boston.rs_property_stg) TO 'C:\Users\Max\Documents\qlik_pp_property_stg.csv' DELIMITER ',' CSV HEADER;
+
+\COPY (select * from boston.rs_isd_building_stg) TO 'C:\Users\Max\Documents\qlik_pp_isd_building_stg.csv' DELIMITER ',' CSV HEADER;
+
+\COPY (select * from boston.rs_isd_code_stg) TO 'C:\Users\Max\Documents\qlik_pp_isd_code_stg.csv' DELIMITER ',' CSV HEADER;
+
+\COPY (select * from boston.rs_isd_housing_stg) TO 'C:\Users\Max\Documents\qlik_pp_isd_housing_stg.csv' DELIMITER ',' CSV HEADER;
+
+\COPY (select * from boston.rs_mhl_civic_stg) TO 'C:\Users\Max\Documents\qlik_pp_mhl_civic_stg.csv' DELIMITER ',' CSV HEADER;
+
+\COPY (select * from boston.rs_mhl_housing_stg) TO 'C:\Users\Max\Documents\qlik_pp_mhl_housing_stg.csv' DELIMITER ',' CSV HEADER;
+
+\COPY (select * from boston.v_rs_property_main_bldg) TO 'C:\Users\Mhandler\Documents\rentsmart_data.csv' DELIMITER ',' CSV HEADER;
